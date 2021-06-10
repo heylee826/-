@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클레이아크김해미술관</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/icon.jpg">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<body>
+  <ul class="sideBar">
+    <li class="on">Home</li>
+    <li>현재전시</li>
+    <li>교육 &#183; 체험</li>
+    <li>미디어</li>
+  </ul>
+
+  <div id="header">
+    <a href="#" class="logo"><img src="./img/logo.png" alt="로고"></a>
+    <img src="./img/header_line.png" alt="">
+    <div class="headerin">
+      <ul class="gnb">
+        <li><a href="#">클레이아크</a></li>
+        <li><a href="#">전시</a></li>
+        <li><a href="#">세라믹창작센터</a></li>
+        <li><a href="#">교육 &#183; 체험</a></li>
+        <li><a href="#">이벤트</a></li>
+        <li><a href="#">관람안내</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="wrap">
+    <div id="home" class="page">
+      <div class="lamp1">
+        <div class="lampL">
+          <img src="./img/lamp_header_L.png" alt="조명">
+          <img src="./img/lamp_lighting_header_L.png" alt="조명불빛" class="lighting">
+        </div>
+        <div class="lampR">
+          <img src="./img/lamp_lighting_header_R.png" alt="조명불빛" class="lighting">
+          <img src="./img/lamp_header_R.png" alt="조명">
+        </div>
+      </div><!-- lamp1 -->
+      <div class="homein">
+        <img src="./img/frame_slider.png" alt="슬라이드액자" class="frame">
+        <div class="slider">
+          <a href="#"><img src="./img/slider01_pc.jpg" alt=""></a>
+          <a href="#"><img src="./img/slider02_pc.jpg" alt=""></a>
+          <a href="#"><img src="./img/slider03_pc.jpg" alt=""></a>
+        </div><!-- slider -->
+        <img src="./img/explation_slider.png" alt="작품설명이미지" class="explain">
+      </div><!-- homein -->
+    </div><!-- home -->
+
+
+
+    <div id="cont1" class="page">
+      <div class="cont1in">
+        <div class="txt">
+          <h1>
+            <span>현재전시</span><br>
+            Currently on display
+          </h1>
+        </div>
+        <div class="lamp2">
+          <div>
+            <p class="lamp"></p>
+            <p class="lighting"></p>
+            <p class="frame1 frame"></p>
+          </div>
+          <div>
+            <p class="lamp"></p>
+            <p class="lighting"></p>
+            <p class="frame2 frame"></p>
+          </div>
+          <div>
+            <p class="lamp"></p>
+            <p class="lighting"></p>
+            <p class="frame3 frame"></p>
+          </div>
+        </div><!-- lamp2 -->       
+      </div><!-- cont1in -->
+      <img src="./img/fence_color.png" alt="">
+    </div><!-- cont1 -->
+
+
+    <div id="cont2" class="page">
+      <div class="cont2in">
+        <div class="txt">
+          <h1>
+            <span>교육 &#183; 체험</span><br>
+            Education and Experience
+          </h1>
+        </div>
+        <div class="lamp3">
+          <div>
+            <p class="lamp_t"></p>
+            <p class="lighting"></p>
+          </div>
+          <div>
+            <p class="lamp"></p>
+            <p class="lighting"></p>
+          </div>
+          <div>
+            <p class="lamp_t"></p>
+            <p class="lighting"></p>
+          </div>
+        </div><!-- lamp3 -->]
+        <ul class="stand">
+          <li>
+            <a class="frame"><img src="./img/frame_edu01.png" alt=""></a>
+            <p class="st_s"><img src="./img/stand_small.png" alt=""></p>
+          </li>
+          <li>
+            <a class="frame"><img src="./img/frame_edu02.png" alt=""></a>
+            <p class="st_t"><img src="./img/stand_tall.png" alt=""></p>
+          </li>
+          <li>
+            <a class="frame"><img src="./img/frame_edu03.png" alt=""></a>
+            <p class="st_s"><img src="./img/stand_small.png" alt=""></p>
+          </li>
+        </ul><!-- stand -->
+      </div><!-- cont2in -->
+      <img src="./img/fence_color.png" alt="">
+    </div>
+
+
+
+    <div id="cont3" class="page">
+      <div class="cont3in">
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    var winHeight = $(window).height();
+
+    $(window).on('resize', function () {
+      winHeight = $(window).height();
+    });
+
+    $('.sideBar li').on('click', function () {
+      var i = $(this).index();
+      $('html,body').animate({
+        'scrollTop': winHeight * i
+      });
+    });
+
+    function scrollPage() {
+      var scr = $(window).scrollTop();
+      for (i = 0; i < $('.sideBar li').length; i++) {
+        if (scr >= winHeight * i && scr < winHeight * (i + 1)) {
+          $('.sideBar li').removeClass('on')
+          $('.sideBar li').eq(i).addClass('on')
+        }
+      }
+    } //function
+    $(window).on('scroll', scrollPage);
+    scrollPage();
+
+    //mousewheel 이벤트는 꼭! 라이브러리가 연결되어있어야한다.
+    $('#wrap .page').on('mousewheel', function (e, d) {
+      //event, delta약자. 제작자가 제시한 방법 그대로 외워서 쓰기
+      if (d > 0) { //스크롤을 올렸을 때
+
+        var prv = $(this).prev().offset().top
+        $('html,body').stop().animate({
+          'scrollTop': prv
+        });//문서상단간의 거리를 구해주는거 오프셋
+        // $('#header').css({
+        //   'backgroundColor':'red'
+        // });
+
+      } else if (d < 0) { //스크롤을 내렸을 때
+        var nxt = $(this).next().offset().top
+        $('html,body').stop().animate({
+          'scrollTop': nxt
+        })
+        // $('#header').css({
+        //   'backgroundColor':'rgba(255,255,255,0.5)',
+        //   'marginTop':'-63px'
+        // })
+      };
+      });
+
+
+      $("document").ready(function () {
+        $(window).scroll(function () {
+          var position = $(window).scrollTop();
+          // 현재 스크롤바의 위치값을 반환합니다.
+            if (position >= 100) {
+              $('#header').addClass('opa')
+              $('#header .gnb li a').addClass('color')
+            } else {
+              $('#header').removeClass('opa')
+              $('#header .gnb li a').removeClass('color')
+            }
+        });
+      });
+      
+
+  </script>
+  <script>
+    $('.slider').slick({
+      // infinite: true,
+      // slidesToShow: 1,
+      // slidesToScroll: 1,
+      // autoplay: false,
+      // autoplaySpeed: 1000,
+      // arrows: true,
+      // dots: true,
+      // speed: 1000,
+      // pauseOnHover: true,
+      // vertical: false,
+      // centeredSlides: true,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 1000,
+    });
+  </script>
+
+
+
+</body>
+
+</html>

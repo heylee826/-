@@ -1,0 +1,353 @@
+.sideBar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: #444;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.sideBar li {
+  float: left;
+  margin-left: 22px;
+  font-size: 20px;
+}
+
+#wrap #home,#cont1,#cont2,#cont3 {
+  height: 100vh;
+}
+#home{
+  background: url(../img/bg_01.jpg) center;
+}
+#cont1{
+  background: url(../img/bg_02.jpg) center;
+}
+#cont2{
+  background: url(../img/bg_03.jpg) center;
+}
+#cont3{
+  background: url(../img/bg_04.jpg) center;
+}
+
+
+li.on {
+  color: #fff;
+}
+
+
+/*header시작*/
+#header{
+  position: fixed;
+  height: 135px;
+  background-color: rgba(255,255,255,1);
+  z-index: 200;
+}
+/*자바에서 추가한 클래스 .opa*/
+#header.opa{
+  background-color: rgba(255,255,255,0.5);
+  margin-top: -63px;
+  color: #fff;
+}
+
+.logo{
+  display: block;
+  text-align: center;
+  margin: 7px;
+}
+
+.headerin{
+  width: 1200px; 
+  margin: -9px auto;
+}/*왜 -9를 해야하는지 못찾겠음,,,; 딱 가운데 줄 높이만큼 
+밀려있는게 원래 높이라니 왜?*/
+
+.gnb{
+  height: 63px;
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: nowrap;
+  /* background-color: khaki; */
+  align-items: center;
+}
+
+.gnb li a{
+  font-size: 18px;
+  color: #5a5a5a;
+  font-weight: bold;
+}
+.gnb li:hover a{color: orange;}
+.gnb li a.color:hover{color: orange;}
+.gnb li a.color{
+  color: #fff;
+}
+
+
+
+/*home시작*/
+
+#home{
+  width: 100%;
+  overflow: hidden;
+}
+
+.lamp1{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 100;
+}
+
+.lamp1 .lampL{margin-top: 90px;}
+.lamp1 .lampR{margin-top: 90px;}
+
+.lamp1 .lampL img:nth-child(2){
+  margin-left: -150px;
+}
+.lamp1 .lampR img:nth-child(1){
+  margin-right: -150px;
+}
+
+.lamp1 .lighting{opacity: 1;}
+/*이따 여기 하버효과로 바꿀것*/
+
+.homein{
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homein .frame{
+  margin-top: -450px;
+}
+
+.homein .slider{
+  margin-top: -638px;
+}
+.homein .slider img{width: 941px; margin: 0 auto;}
+
+
+
+/*슬릭 css*/
+.slider>button{
+  border: 0;
+  font-size: 0;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  width: 40px; height: 40px;
+  opacity: 0.5;
+}
+
+.slick-prev{
+  position: absolute; top: 50%; left: 70px;
+  transform: translateY(-50%);
+  z-index: 10;
+  transform: rotate(-135deg);
+}
+.slick-next{
+  position: absolute; top: 50%; right: 70px;
+  transform: translateY(-50%);
+  transform: rotate(45deg);
+}
+.slick-dots{
+  position: absolute;
+  bottom: 20px; left: 50%; transform: translateX(-50%);
+}
+.slick-dots li{
+  display:inline-block;
+  margin: 0 8px;
+}
+.slick-dots li button{
+  width: 15px; height: 4px;
+  background-color: rgb(126, 126, 126);
+  border: none;
+  font-size: 0;
+}
+.slick-dots li.slick-active button{
+  background-color: rgb(228, 228, 228);
+  width: 30px;height: 4px;
+}
+/*슬릭 css끝*/
+
+.homein .explain {
+  margin-top: 45px;
+  width: 100px;
+  padding-left: 900px;
+}
+/*home 끝*/
+
+
+
+
+
+
+/*cont1시작*/
+/* #cont1{width: 100%; height: auto;} */
+#cont1{overflow: hidden;}
+
+.cont1in{
+  width: 1200px; height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cont1in .txt{
+  width: 272px; height: 104px;
+  position: absolute;
+  top: 95px; left: 50%;
+  transform: translateX(-50%);
+}
+
+.cont1in h1{
+  width: 272px; height: 104px;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 25px;
+  color: #fff;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.cont1in h1 span{font-size: 40px; font-weight: bold;}
+
+
+.lamp2{
+  display: flex;
+  justify-content: space-around;
+  
+}
+.lamp2 .lamp{
+  background: url(../img/lamp_short.png) no-repeat;
+  width: 78px; height: 312px;
+  margin: 0 auto;
+  
+}
+.lamp2 .lighting{
+  background: url(../img/lamp_lighting_cont.png)no-repeat;
+  width: 427px; height: 553px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+}
+
+
+
+.lamp2 .frame1{
+  background: url(../img/frame_small01.png);
+  width: 305px; height: 422px;
+  margin: 0 auto;
+  margin-top: -520px;
+  margin-bottom: 20px;
+}
+.lamp2 .frame2{
+  background: url(../img/frame_small02.png);
+  width: 305px; height: 422px;
+  margin: 0 auto;
+  margin-top: -520px;
+}
+.lamp2 .frame3{
+  background: url(../img/frame_small03.png);
+  width: 305px; height: 422px;
+  margin: 0 auto;
+  margin-top: -520px;
+}
+/*cont1 끝*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*cont2 시작*/
+#cont2{overflow:;}
+
+.cont2in{
+  width: 1200px; height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background-color: aquamarine;
+}
+
+.cont2in .txt{
+  width: 272px; height: 104px;
+  position: absolute;
+  top: 95px; left: 50%;
+  transform: translateX(-50%);
+}
+
+.cont2in h1{
+  width: 272px; height: 104px;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 20px;
+  color: #fff;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.cont2in h1 span{font-size: 40px; font-weight: bold;}
+
+
+.lamp3{
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.lamp3 .lamp{
+  background: url(../img/lamp_short.png) no-repeat;
+  width: 78px; height: 312px;
+  margin: 0 auto;
+}
+.lamp3 .lighting{
+  background: url(../img/lamp_lighting_cont.png)no-repeat;
+  width: 427px; height: 553px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+}
+.lamp3 .lamp_t{
+  background: url(../img/lamp_long.png) no-repeat;
+  width: 78px; height: 392px;
+  margin: 0 auto;
+}
+
+.stand{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 10%;
+}
+.stand li{
+  text-align: center;
+}
+
+/* 
+.lamp3 .frame1{
+  background: url(../img/frame_small01.png);
+  width: 305px; height: 422px;
+  margin: 0 auto;
+  margin-top: -520px;
+  margin-bottom: 20px;
+}
+.lamp2 .frame2{
+  background: url(../img/frame_small02.png);
+  width: 305px; height: 422px;
+  margin: 0 auto;
+  margin-top: -520px;
+}
+.lamp2 .frame3{
+  background: url(../img/frame_small03.png);
+  width: 305px; height: 422px;
+  margin: 0 auto;
+  margin-top: -520px;
+} */
